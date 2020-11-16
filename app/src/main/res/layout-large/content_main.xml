@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="technology.innovation.gstcalculator.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <!--  <Space
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/calc_info"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <!--
+                <ImageView
+                    android:id="@+id/calc_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/calc_disp" />-->
+                    <TextView
+                        android:id="@+id/amount_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:paddingTop="20dp"
+                        android:textSize="60sp"
+                        android:textStyle="bold" />
+
+                    <!--<Button
+                        android:id="@+id/btnBack"
+                        android:layout_width="45dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/backspace"
+                        android:textColor="#FFFFFF" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                android:background="@drawable/gst_info">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/base_fare"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Base Fare"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/base_fare_value"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/central_tax"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CGST"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/central_tax_value"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="24sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/state_tax"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SGST"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/state_tax_value"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/total_tax"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total GST Tax"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/total_tax_value"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="24sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Amount"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/total_amount_value"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn7"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="7"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn8"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="8"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btn9"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="9"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btnBack"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_fun"
+                        android:fontFamily="sans-serif"
+                        android:text="Undo"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btnAC"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_fun"
+                        android:text="AC"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn4"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="4"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn5"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="5"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btn6"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="6"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btnDiv"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_backspace"
+                        android:text="/"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btnHistory"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_fun"
+                        android:text="Log's"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn1"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn2"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btn3"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="3"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btnMulti"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_backspace"
+                        android:text="X"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btnMinus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_backspace"
+                        android:text="-"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn0"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btn00"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btndot"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_calc_but"
+                        android:text="."
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btnPlus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_backspace"
+                        android:text="+"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btnEqual"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_backspace"
+                        android:text="="
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn3Plus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_plus"
+                        android:text="+3%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn5Plus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_plus"
+                        android:text="+5%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn12Plus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_plus"
+                        android:text="+12%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn18Plus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_plus"
+                        android:text="+18%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn28Plus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_plus"
+                        android:text="+28%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn3Minus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_minus"
+                        android:text="-3%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn5Minus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_minus"
+                        android:text="-5%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn12Minus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_minus"
+                        android:text="-12%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btn18Minus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_minus"
+                        android:text="-18%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/btn28Minus"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gst_minus"
+                        android:text="-28%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
